@@ -1,0 +1,55 @@
+name: Sync Announcement to Octo
+
+# Fires when a new Discussion is created in the Announcements category.
+# Posts a notification to the Octo 📌 announcements group.
+
+on:
+  discussion:
+    types: [created]
+
+permissions: {}  # GITHUB_TOKEN not used
+
+jobs:
+  sync:
+    if: github.event.discussion.category.name == 'Announcements'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to Octo announcements
+        env:
+          OCTO_BOT_TOKEN: ${{ secrets.OCTO_BOT_TOKEN }}
+          TITLE: ${{ github.event.discussion.title }}
+          BODY: ${{ github.event.discussion.body }}
+          URL: ${{ github.event.discussion.html_url }}
+          AUTHOR: ${{ github.event.discussion.user.login }}
+        run: |
+          python3 << 'PYEOF'
+          import os, json, urllib.request, sys
+
+          title  = os.environ.get('TITLE', '')
+          body   = os.environ.get('BODY', '')
+          url    = os.environ.get('URL', '')
+          author = os.environ.get('AUTHOR', '')
+
+          # Truncate body to 200 chars to keep message concise
+          preview = body[:200].strip()
+          if len(body) > 200:
+              preview += '…'
+
+          msg = f'📣 {title}'
+          if preview:
+              msg += f'\n\n{preview}'
+          msg += f'\n\n🔗 {url}'
+
+          token = os.environ['OCTO_BOT_TOKEN']
+          api = 'https://im.deepminer.com.cn/api/v1/bot/sendMessage'
+          headers = {'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'}
+
+          payload = json.dumps({
+              'channel_id': '2ff323b462624be4bb5a6e9f40f4d0d8',
+              'channel_type': 2,
+              'payload': {'type': 1, 'content': msg},
+          }).encode()
+          req = urllib.request.Request(api, data=payload, headers=headers, method='POST')
+          with urllib.request.urlopen(req) as r:
+              print(f'→ Octo announcements: HTTP {r.status}')
+          PYEOF
