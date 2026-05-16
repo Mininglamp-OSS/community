@@ -51,8 +51,9 @@ The name **OCTO** captures the four pillars of the platform:
 graph TD
   subgraph Clients[Clients]
     Web[octo-web<br/>Web / PC]
-    Android[octo-android<br/>Android]
-    iOS[octo-ios<br/>iOS]
+    Android[octo-android<br/>Android 🚧]
+    iOS[octo-ios<br/>iOS 🚧]
+    CLI[octo-cli<br/>CLI 🚧]
   end
 
   subgraph Core[Core Services]
@@ -68,8 +69,9 @@ graph TD
   end
 
   Web --> Server
-  Android --> Server
-  iOS --> Server
+  Android -.coming soon.-> Server
+  iOS -.coming soon.-> Server
+  CLI -.coming soon.-> Server
   Admin --> Server
   Server --> Matter
   Server --> Summary
@@ -83,6 +85,9 @@ graph TD
 |------------|----------|---------|
 | [octo-server](https://github.com/Mininglamp-OSS/octo-server) | Go | Backend API + Lobster agent scheduling |
 | [octo-web](https://github.com/Mininglamp-OSS/octo-web) | TypeScript / React | Web + PC (Electron) client |
+| [octo-android](https://github.com/Mininglamp-OSS/octo-android) | Kotlin / Java | Native Android client — 🚧 Coming Soon |
+| [octo-ios](https://github.com/Mininglamp-OSS/octo-ios) | Swift | Native iOS client — 🚧 Coming Soon |
+| [octo-cli](https://github.com/Mininglamp-OSS/octo-cli) | Go | Command-line interface — 🚧 Coming Soon |
 | [octo-admin](https://github.com/Mininglamp-OSS/octo-admin) | TypeScript / React | Operations console |
 | [octo-matter](https://github.com/Mininglamp-OSS/octo-matter) | Go | Task / todo microservice |
 | [octo-smart-summary](https://github.com/Mininglamp-OSS/octo-smart-summary) | Go | LLM-powered conversation summary |
