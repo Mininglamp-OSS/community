@@ -89,7 +89,7 @@ graph TD
 | [octo-web](https://github.com/Mininglamp-OSS/octo-web) | TypeScript / React | Web + PC (Electron) client |
 | octo-android | Kotlin / Java | Native Android client — 🚧 Coming Soon |
 | octo-ios | Swift | Native iOS client — 🚧 Coming Soon |
-| [octo-cli](https://github.com/Mininglamp-OSS/octo-cli) | Go | Command-line interface — 🚧 Coming Soon |
+| octo-cli | Go | Command-line interface — 🚧 Coming Soon |
 | [octo-admin](https://github.com/Mininglamp-OSS/octo-admin) | TypeScript / React | Operations console |
 | [octo-matter](https://github.com/Mininglamp-OSS/octo-matter) | Go | Task / todo microservice |
 | [octo-smart-summary](https://github.com/Mininglamp-OSS/octo-smart-summary) | Go | LLM-powered conversation summary |
@@ -138,7 +138,7 @@ We welcome contributions of all kinds — code, docs, bug reports, and ideas. Pl
 
 ## Star History
 
-> Tracking the 6 core product repos (octo-lib and octo-admin are infrastructure/tooling and excluded from the trend chart).
+> Tracking the 6 core product repos (octo-lib, octo-admin, and the private octo-cli repo are excluded from the trend chart).
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Mininglamp-OSS/octo-web,Mininglamp-OSS/octo-server,Mininglamp-OSS/octo-adapters,Mininglamp-OSS/octo-deployment,Mininglamp-OSS/octo-matter,Mininglamp-OSS/octo-smart-summary&type=Date)](https://star-history.com/#Mininglamp-OSS/octo-web&Mininglamp-OSS/octo-server&Mininglamp-OSS/octo-adapters&Mininglamp-OSS/octo-deployment&Mininglamp-OSS/octo-matter&Mininglamp-OSS/octo-smart-summary&Date)
 
