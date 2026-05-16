@@ -51,9 +51,11 @@ The name **OCTO** captures the four pillars of the platform:
 graph TD
   subgraph Clients[Clients]
     Web[octo-web<br/>Web / PC]
-    Android[octo-android<br/>Android 🚧]
-    iOS[octo-ios<br/>iOS 🚧]
     CLI[octo-cli<br/>CLI 🚧]
+  end
+  subgraph PlannedClients[Clients — Planned]
+    Android[octo-android<br/>Android]
+    iOS[octo-ios<br/>iOS]
   end
 
   subgraph Core[Core Services]
@@ -85,8 +87,8 @@ graph TD
 |------------|----------|---------|
 | [octo-server](https://github.com/Mininglamp-OSS/octo-server) | Go | Backend API + Lobster agent scheduling |
 | [octo-web](https://github.com/Mininglamp-OSS/octo-web) | TypeScript / React | Web + PC (Electron) client |
-| [octo-android](https://github.com/Mininglamp-OSS/octo-android) | Kotlin / Java | Native Android client — 🚧 Coming Soon |
-| [octo-ios](https://github.com/Mininglamp-OSS/octo-ios) | Swift | Native iOS client — 🚧 Coming Soon |
+| octo-android | Kotlin / Java | Native Android client — 🚧 Coming Soon |
+| octo-ios | Swift | Native iOS client — 🚧 Coming Soon |
 | [octo-cli](https://github.com/Mininglamp-OSS/octo-cli) | Go | Command-line interface — 🚧 Coming Soon |
 | [octo-admin](https://github.com/Mininglamp-OSS/octo-admin) | TypeScript / React | Operations console |
 | [octo-matter](https://github.com/Mininglamp-OSS/octo-matter) | Go | Task / todo microservice |
@@ -109,7 +111,7 @@ cp docker/.env.example docker/.env
 # Edit docker/.env — at minimum, generate secure values for:
 #   MYSQL_ROOT_PASSWORD, MINIO_ROOT_PASSWORD, OCTO_MINIO_APP_PASSWORD,
 #   OCTO_MASTER_KEY, OCTO_NOTIFY_INTERNAL_TOKEN, OCTO_WUKONGIM_MANAGER_TOKEN,
-#   OCTO_MATTER_DB_PASSWORD, OCTO_SUMMARY_DB_PASSWORD
+#   OCTO_MATTER_DB_PASSWORD, OCTO_SUMMARY_DB_PASSWORD, OCTO_SUMMARY_READER_PASSWORD
 # Tip: use `openssl rand -hex 32` to generate each secret.
 
 # 3. Start all services
@@ -135,6 +137,8 @@ Octo's real-time messaging layer is powered by [WuKongIM](https://github.com/WuK
 We welcome contributions of all kinds — code, docs, bug reports, and ideas. Please read [CONTRIBUTING.md](https://github.com/Mininglamp-OSS/.github/blob/main/CONTRIBUTING.md) and [GOVERNANCE.md](GOVERNANCE.md) before getting started.
 
 ## Star History
+
+> Tracking the 6 core product repos (octo-lib and octo-admin are infrastructure/tooling and excluded from the trend chart).
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Mininglamp-OSS/octo-web,Mininglamp-OSS/octo-server,Mininglamp-OSS/octo-adapters,Mininglamp-OSS/octo-deployment,Mininglamp-OSS/octo-matter,Mininglamp-OSS/octo-smart-summary&type=Date)](https://star-history.com/#Mininglamp-OSS/octo-web&Mininglamp-OSS/octo-server&Mininglamp-OSS/octo-adapters&Mininglamp-OSS/octo-deployment&Mininglamp-OSS/octo-matter&Mininglamp-OSS/octo-smart-summary&Date)
 
