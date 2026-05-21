@@ -17,13 +17,10 @@
 
 <!-- How was this tested? Include commands, screenshots, or test output. -->
 
-- [ ] Unit tests added/updated
 - [ ] Manually verified
 
 ## Checklist
 
 - [ ] I have read [CONTRIBUTING.md](../CONTRIBUTING.md)
 - [ ] PR description is in English
-- [ ] Added tests for my changes
-- [ ] Updated documentation
 - [ ] Followed commit message conventions (Conventional Commits)

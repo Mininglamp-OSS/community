@@ -1,5 +1,7 @@
 # Contributing to OCTO
 
+> **Note:** This repository is a **community discussions hub** — it contains no application code and no CI pipeline. Contributions here are primarily discussions, issues, and community health files.
+
 Thanks for your interest in contributing to OCTO! 🐙 We welcome contributions of all sizes.
 
 ## Getting Started
@@ -7,14 +9,11 @@ Thanks for your interest in contributing to OCTO! 🐙 We welcome contributions 
 1. **Fork** the repo and create your branch from `main`.
 2. **Install dependencies** — see the project's README for setup instructions.
 3. **Make your changes** — follow existing code style.
-4. **Add tests** — if you're fixing a bug or adding a feature, please add tests.
-5. **Update docs** — if behavior changes, update the README/docs accordingly.
-6. **Open a Pull Request** — fill in the PR template.
+4. **Open a Pull Request** — fill in the PR template.
 
 ## Development Workflow
 
 - All changes go through a Pull Request.
-- PRs must pass CI before merging.
 - PRs require at least one approving review from a maintainer.
 - We use squash-merge to keep history clean.
 
@@ -36,16 +35,9 @@ chore: bump dependency versions
 - Include screenshots for UI changes.
 - **Write PR descriptions in English** to keep the history accessible to the global community.
 
-## Code Style
-
-- **Go**: `gofmt` + `golangci-lint`
-- **TypeScript/JavaScript**: Prettier + ESLint (config in repo)
-- **Swift**: SwiftFormat
-- **Kotlin**: ktlint / Android Studio default
-
 ## Reporting Bugs
 
-Open a GitHub issue using the **Bug Report** template. Include:
+Open a [Bug Report discussion](https://github.com/Mininglamp-OSS/community/discussions/new?category=bug-reports). Include:
 
 - Expected vs actual behavior
 - Steps to reproduce
@@ -54,7 +46,7 @@ Open a GitHub issue using the **Bug Report** template. Include:
 
 ## Suggesting Features
 
-Open a GitHub issue using the **Feature Request** template. Explain the
+Open a [Feature Request discussion](https://github.com/Mininglamp-OSS/community/discussions/new?category=feature-requests). Explain the
 use case and why existing features don't solve it.
 
 ## License
